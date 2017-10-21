@@ -7,55 +7,75 @@
 </head>
 <body>
 	<div class="keys">
-		<a class="key" data-key="">
+		<a class="key" data-key="65">
 			<div class="alt-key"></div>
-			<span>a</span>
+			<kbd>a</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="83">
 			<div class="alt-key"></div>
-			<span>s</span>
+			<kbd>s</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="68">
 			<div class="alt-key"></div>
-			<span>d</span>
+			<kbd>d</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="70">
 			<div class="alt-key"></div>
-			<span>f</span>
+			<kbd>f</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="71">
 			<div class="alt-key"></div>
-			<span>g</span>
+			<kbd>g</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="72">
 			<div class="alt-key"></div>
-			<span>h</span>
+			<kbd>h</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="74">
 			<div class="alt-key"></div>
-			<span>j</span>
+			<kbd>j</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="75">
 			<div class="alt-key"></div>
-			<span>k</span>
+			<kbd>k</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="76">
 			<div class="alt-key"></div>
-			<span>l</span>
+			<kbd>l</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="86">
 			<div class="alt-key"></div>
-			<span>v</span>
+			<kbd>v</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="66">
 			<div class="alt-key"></div>
-			<span>b</span>
+			<kbd>b</kbd>
 		</a>
-		<a class="key" data-key="">
+		<a class="key" data-key="78">
 			<div class="alt-key"></div>
-			<span>n</span>
+			<kbd>n</kbd>
 		</a>
 	</div>
 
+	<audio data-key="65" src="piano/001.wav"></audio>
+	<audio data-key="83" src="piano/002.wav"></audio>
+	<audio data-key="68" src="piano/003.wav"></audio>
+	<audio data-key="70" src="piano/004.wav"></audio>
+	<audio data-key="71" src="piano/005.wav"></audio>
+	<audio data-key="72" src="piano/006.wav"></audio>
+	<audio data-key="74" src="piano/007.wav"></audio>
+	<audio data-key="75" src="piano/008.wav"></audio>
+	<audio data-key="76" src="piano/009.wav"></audio>
+	<audio data-key="86" src="piano/010.wav"></audio>
+	<audio data-key="66" src="piano/011.wav"></audio>
+	<audio data-key="78" src="piano/012.wav"></audio>
+
+<script>
+	window.addEventListener('keydown', function(e){	
+	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+	if(!audio) return;
+	audio.play();
+	});
+</script>
 </body>
 </html>
