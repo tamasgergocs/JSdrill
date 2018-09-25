@@ -1,0 +1,35 @@
+$primary-font: "Metropolis";
+$secondary-font: "Lato";
+
+$default-font-size: 1rem;
+$default-line-height: 1;
+$default-text-decoration: none;
+$default-text-margin: 0.5rem;
+
+@mixin default-text-margin {
+  margin-bottom: $default-text-margin;
+}
+
+// text-colors
+$text-default: #333333;
+$text-gey: #444444;
+$text-font-weight: normal;
+
+
+// Paragraph font
+$p-font-family: $secondary-font;
+$p-font-weight: $text-font-weight;
+$p-font-size: $default-font-size;
+$p-line-height: $default-line-height;
+$p-text-decoration: $default-text-decoration;
+
+// foundation
+@mixin paragraph {
+  font-family: $secondary-font;
+  @include default-text-margin;
+}
+// Text styles
+@mixin driver-secondary-attributes {
+  @include paragraph;
+  color: $text-gey;
+}
